@@ -130,3 +130,30 @@ if (typeof module === "object") {
     "Point": Point
   };
 }
+
+//My Contribution
+function pushToArrayAndDisplay(){
+  let getx = document.getElementById("x-input").value;
+  let gety = document.getElementById("y-input").value;
+  points.push(
+    new Point(getx,gety))
+  var newPointEntry = document.createElement("li");
+  newPointEntry.innerHTML = getx + "|" + gety;
+  document.getElementById("unorderPointsList").appendChild(newPointEntry);
+}
+
+function resolve(){
+  solve(points);
+  document.getElementById("path").innerHTML =  ordered_points;
+}
+
+document.getElementById("submitPoint").addEventListener("click", pushToArrayAndDisplay());
+document.getElementById("resolve").addEventListener("click", resolve());
+
+var points = [
+  //Points get pushed in here
+];
+
+var solution = solve(points);
+var ordered_points = solution.map(i => points[i]);
+// ordered_points now contains the points, in the order they ought to be visited.
