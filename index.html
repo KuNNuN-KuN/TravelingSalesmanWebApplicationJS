@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Traveling Salesman Application</title>
+    <script src="salesman.js"></script>
+</head>
+<body>
+<!--Adding points-->
+    <section id="addPoints">
+        <input type="number" id="x-input" placeholder="x position" name="x"><br>
+        <input type="number" id="y-input" placeholder="y position" name="y"><br>
+        <button id="submitPoint">Add point to path</button>
+    </section>
+
+<!--Display entered points-->
+    <section>
+        <ul id="unorderPointsList">
+            <!--Write Points here-->
+        </ul>
+    </section>
+
+<!--Display result-->
+    <section id="displayResult">
+        <button id="resolve">Find quickest path visiting each point in the coordinate system</button>
+        <p id="path"></p>
+    </section>
+</body>
+</html>
